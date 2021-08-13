@@ -21,6 +21,7 @@ function customplugin_table()
    $tablename_relationship_town = $wpdb->prefix . "relationship_town";
    $tablename_relationship_cast = $wpdb->prefix . "relationship_cast";
    $tablename_relationship_ulice = $wpdb->prefix . "relationship_ulice";
+   $tablename_tarif_group = $wpdb->prefix . "tarif_group";
 
    $sql_mesta = "CREATE TABLE $tablename_mesta (
    id int NOT NULL AUTO_INCREMENT, 
@@ -99,6 +100,16 @@ function customplugin_table()
       id_tarif int NOT NULL,
       PRIMARY KEY  (id),
       ) $charset_collate;";
+
+   require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+   dbDelta($sql_relationship_ulice);
+
+$tablename_tarif_group = "CREATE TABLE wp_tarif_group ( 
+id INT NOT NULL AUTO_INCREMENT ,
+id_tarif_1 INT NOT NULL,
+id_tarif_2 INT NOT NULL,
+id_tarif_3 INT NOT NULL,
+PRIMARY KEY (id)) ENGINE = InnoDB;";
 
    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
    dbDelta($sql_relationship_ulice);
