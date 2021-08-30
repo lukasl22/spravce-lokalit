@@ -11,4 +11,4 @@ Ke každé lokalitě lze přiřadit příslušný internetový tarif z databáze
 Plugin se zobrazuje na webových stránkách ve formě objednatelných tarifů pro každou lokaci.
 
 
-!!TARIF NELZE VYUŽÍT BEZ PŘÍSLUŠNÝCH TABULEK V DATABÁZI!!
+!!PLUGIN NELZE VYUŽÍT BEZ PŘÍSLUŠNÝCH TABULEK V DATABÁZI!!
